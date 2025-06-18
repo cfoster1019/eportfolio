@@ -9,26 +9,43 @@ h1,h2,h3,h4,h5,h6,span{color: #242424;
 
 p{line-height: 1.5;font-size: 16px;}
 
+.flex-1{flex: 1;}
+
+.flex{display: flex;}
+
 /* Navigation Bar */
 
 nav{height: 100px;
 width: 100%;
-max-width: 2000px;
+max-width: 992px;
 margin: 0 auto;
-display: flex;justify-content: space-between;
-align-items: center;font-size: 32px}
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 
-figure{height: 100%;}
+.nav__link--list{display: flex;}
 
-ul{list-style: none;}
+ul{list-style: none;;}
 
-.nav__link--list{display: flex}
-
-.nav__link--anchor{color: #223b59;font-weight: 700;margin: 0 12px;text-decoration: none;}
+.nav__link--anchor{margin: 0 12px;
+font-size: 28px;
+color: #223b59;
+font-weight: 700;
+text-decoration: none;}
 
 .nav__link--anchor-primary{background-color: #6598af;
-    padding: 8px 20px;
-    border-radius: 50px;
-    color: white; transition: all 300ms ease-in-out;
-    }
-.nav__link--anchor-primary:hover {background-color: #d6ad6b;}
+    padding: 8px 16px;
+    color: white;
+    border-radius: 12px;transition: all 300ms ease;}
+
+.nav__link--anchor-primary:hover{background-color: #d6ad6b;}
+
+figure{height: 100%;padding: 0 12px;}
+
+/*About me*/
+#about-me{min-height: 100vh;display: flex;flex-direction: column;}
+
+.about-me__info--container{display: flex;flex-direction: column;align-items: center;}
+.hand{animation:rock 200ms infinite alternate-reverse;transition: all 300ms}
+.name{color: #6598af;}
