@@ -9,9 +9,11 @@ h1,h2,h3,h4,h5,h6,span{color: #242424;
 
 p{line-height: 1.5;font-size: 16px;}
 
+h1{font-size: 32px;}
+
 .flex-1{flex: 1;}
 
-.flex{display: flex;}
+.flex{display: flex;justify-content: center;}
 
 /* Navigation Bar */
 
@@ -44,8 +46,31 @@ text-decoration: none;}
 figure{height: 100%;padding: 0 12px;}
 
 /*About me*/
-#about-me{min-height: 100vh;display: flex;flex-direction: column;}
+#about-me{min-height: 100vh;
+    display: flex;
+    flex-direction: column;}
 
-.about-me__info--container{display: flex;flex-direction: column;align-items: center;}
-.hand{animation:rock 200ms infinite alternate-reverse;transition: all 300ms}
+.about-me__info--container{display: flex;
+    flex-direction: column;ali
+    }
+
+.about-me__picture--mask{width: 100px;
+    height: 100px;
+    margin-bottom: 28px;}
+
+.about-me__picture{padding: 8px 0 0);
+}
+
+.about-me__info--para{font-size: 20px;margin-bottom: 28px;}
+
+.about-me__info{display: flex; flex-direction: column;}
+.row {width: 100%;max-width: 800px;margin: 0 auto;padding: 0 12px;}
+
+@keyframes animate-wave{
+    0% {transform:rotate(0)}
+    50%{transform: rotate(30deg);}
+    100%{transform: rotate(0);}
+}
+
+.hand{display: inline-block; animation:wave 500ms infinite ease-in-out;}
 .name{color: #6598af;}
