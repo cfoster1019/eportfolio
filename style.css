@@ -1,7 +1,8 @@
 *{font-family:"Quicksand", sans-serif;
 padding: 0;
 margin: 0;
-box-sizing: border-box;}
+box-sizing: border-box;
+background-color: #e3f3ff;}
 
 html {
   scroll-behavior: smooth;
@@ -56,6 +57,7 @@ i:hover {
 
 li {
   list-style-type: none;
+  background-color: #6598af;
 }
 
 .flex {
@@ -93,22 +95,25 @@ section:nth-child(even) {
 nav {
   height: 100px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 100%vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 12px;
+  background-color:  #6598af;
 }
 
 .nav__link--list {
   display: flex; font-size: 24px;
+  background-color: #6598af;
 }
 
 .nav__link--anchor {
   margin: 0 12px;
   color: #223b59;
   font-weight: 700;
+  background-color: #6598af;
 }
 
 .nav__link--anchor-primary {
@@ -373,7 +378,7 @@ nav {
 /* FOOTER */
 
 footer {
-  background-color: #6598af;
+  background-color: #e3f3ff;
 }
 
 .footer__social--list {
@@ -399,7 +404,7 @@ footer {
 .footer__social--link,
 .footer__copyright,
 .footer__logo--popper {
-  color: #fff;font-size: 24px;
+  color: #000;font-size: 24px;
 }
 
 .footer__logo--popper {
@@ -484,90 +489,4 @@ footer {
     text-align: center;
     margin: 12px 0;
   }
-}
-
-main#carousel {
-    grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    width: 100vw;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 600px;
-    --items: 4;
-    --middle: 2;
-    --position: 1;
-    pointer-events: none;
-}
-
-.item img {
-    width: 100px;
-    height: 100px;
-    margin-top: 5px;}
-
-div.item {
-    text-align: center;
-    padding: 10px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: #fff;
-    position: absolute;
-    width: 300px;
-    height: 250px;
-    background-color: white;
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
-}
-
-div.item:nth-of-type(1) {
-    --offset: 1;
-}
-div.item:nth-of-type(2) {
-    --offset: 2;
-}
-div.item:nth-of-type(3) {
-    --offset: 3;
-}
-div.item:nth-of-type(4) {
-    --offset: 4;
-}
-
-input:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-
-input:nth-of-type(1):checked ~ main#carousel {
-    --position: 1;
-}
-
-input:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(2):checked ~ main#carousel {
-    --position: 2;
-}
-
-input:nth-of-type(3) {
-    grid-column: 4 /5;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(3):checked ~ main#carousel {
-    --position: 3;
-}
-
-input:nth-of-type(4) {
-    grid-column: 5 / 6;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(4):checked ~ main#carousel {
-    --position: 4;
 }
